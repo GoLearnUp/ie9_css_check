@@ -3,7 +3,7 @@ Check IE9 css files for selector length
 
 == Install
 
-    $ npm install ie9_css_check
+    $ npm install -g ie9_css_check
 
 == Usage
 
