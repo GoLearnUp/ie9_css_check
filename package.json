@@ -19,7 +19,6 @@
   },
   "dependencies" : {
     "underscore": "1.4.3",
-    "async": "0.1.22",
     "bless": "*",
     "commander": "*",
     "colors": "*"
