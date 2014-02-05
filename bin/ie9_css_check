@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var bless = require('bless');
+var fs = require('fs');
+var _ = require('underscore');
+var colors = require('colors');
+
+var MAX_SELECTORS_PER_FILE = 4095;
+
+program
+  .version('0.0.1')
+  .usage('[options] <file ...>')
+  .parse(process.argv);
+
+
+var parser = new bless.Parser({
+  output: "",
+  options: {}
+});
+
+var exitCode = 0;
+
+_.each(program.args, function(fileName) {
+  console.log("** Checking file: " + fileName.green);
+  var fileContents = fs.readFileSync(fileName).toString();
+
+  parser.parse(fileContents, function(err, __, numSelectors) {
+    if (err) {
+      console.error(("Error parsing file:" + err.toString()).red);
+    }
+
+    if (numSelectors > MAX_SELECTORS_PER_FILE) {
+      var str = "Too many selectors.  Expected < ";
+      str += MAX_SELECTORS_PER_FILE + ", found " + numSelectors;
+      console.warn(str.red);
+      exitCode = 1;
+    }
+  });
+});
+
+process.exit(exitCode);

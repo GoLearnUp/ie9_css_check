@@ -1,0 +1,32 @@
+{
+  "name": "ie9_css_check",
+  "version": "0.0.1",
+  "author": "Scott Taylor <scott@learnup.com>",
+  "description": "ie9_css_check",
+  "contributors": [
+    {
+      "name": "Scott Taylor",
+      "email": "scott@learnup.com"
+    },
+    {
+      "name": "Andrew Pariser",
+      "email": "pariser@learnup.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/golearnup/ie9_css_check.git"
+  },
+  "dependencies" : {
+    "underscore": "1.4.3",
+    "async": "0.1.22",
+    "bless": "*",
+    "commander": "*",
+    "colors": "*"
+  },
+  "devDependencies": {
+    "jake": "0.5.8",
+    "jshint": "0.5.5",
+    "nodemon": "*"
+  }
+}
