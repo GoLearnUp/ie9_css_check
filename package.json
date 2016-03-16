@@ -1,6 +1,6 @@
 {
   "name": "ie9_css_check",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Scott Taylor <scott@learnup.com>",
   "description": "ie9_css_check",
   "contributors": [
@@ -19,7 +19,7 @@
   },
   "dependencies" : {
     "underscore": "1.4.3",
-    "bless": "*",
+    "bless": "3.0.3",
     "commander": "*",
     "colors": "*"
   },

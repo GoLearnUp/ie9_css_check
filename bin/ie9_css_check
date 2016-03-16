@@ -9,7 +9,7 @@ var colors = require('colors');
 var MAX_SELECTORS_PER_FILE = 4095;
 
 program
-  .version('0.0.1')
+  .version('0.1.1')
   .usage('[options] <file ...>')
   .parse(process.argv);
 
